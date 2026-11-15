@@ -1,0 +1,400 @@
+/* Design tokens: change colours and fonts here */
+:root {
+    --primary: #1a3a6b;
+    --accent: #e8a317;
+    --bg: #f5f7fb;
+    --surface: #fff;
+    --text: #1c1c1c;
+    --line: #c9d1e0;
+    --error: #b00020;
+    --hdr: #1a3a6b;
+    --on-hdr: #fff;
+    --font: "Segoe UI", Roboto, Arial, sans-serif;
+    --head: Georgia, "Times New Roman", serif
+}
+
+:root[data-theme="dark"] {
+    --primary: #8db4f2;
+    --bg: #121a2b;
+    --surface: #1c2740;
+    --text: #f0f0f0;
+    --line: #3a4a6b;
+    --error: #ff8a9b;
+    --hdr: #0c1322
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-padding-top: 1rem
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--head);
+    line-height: 1.25
+}
+
+h2 {
+    margin-top: 0
+}
+
+a {
+    color: var(--primary)
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: #fff;
+    color: #000;
+    padding: .5rem 1rem
+}
+
+.skip-link:focus {
+    left: 0;
+    z-index: 100
+}
+
+header,
+footer {
+    background: var(--hdr);
+    color: var(--on-hdr);
+    padding: 1rem
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3rem
+}
+
+footer {
+    text-align: center
+}
+
+footer p {
+    margin: 0
+}
+
+.tools {
+    display: flex;
+    gap: .5rem
+}
+
+.tools button {
+    margin: 0;
+    background: transparent;
+    border: 1px solid var(--on-hdr);
+    color: var(--on-hdr)
+}
+
+nav {
+    background: #12294d
+}
+
+:root[data-theme="dark"] nav {
+    background: #16213a
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column
+}
+
+nav ul.open {
+    display: flex
+}
+
+nav a {
+    display: block;
+    padding: .75rem 1rem;
+    color: #fff;
+    text-decoration: none
+}
+
+nav a:hover,
+nav a:focus,
+nav a.current {
+    background: var(--accent);
+    color: #000
+}
+
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem
+}
+
+section {
+    margin-bottom: 2rem
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center
+}
+
+.hero h2 {
+    font-size: 2rem
+}
+
+.btn {
+    display: inline-block;
+    padding: .6rem 1.2rem;
+    background: var(--primary);
+    color: var(--bg);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600
+}
+
+.btn.alt {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary)
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+
+.card,
+figure {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 1rem;
+    margin: 0 0 1rem
+}
+
+.grid .card,
+.grid figure {
+    margin: 0
+}
+
+.card h3 {
+    margin-top: 0
+}
+
+figure {
+    padding: .5rem
+}
+
+figcaption {
+    padding: .5rem .25rem 0
+}
+
+.note {
+    font-size: .9rem;
+    opacity: .8
+}
+
+.table-wrap {
+    overflow-x: auto
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--surface)
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    padding: .5rem 0
+}
+
+th,
+td {
+    padding: .6rem;
+    border: 1px solid var(--line);
+    text-align: left
+}
+
+thead {
+    background: var(--hdr);
+    color: var(--on-hdr)
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(127, 150, 200, .12)
+}
+
+tbody tr:hover {
+    background: rgba(232, 163, 23, .25)
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600
+}
+
+label.check {
+    font-weight: 400
+}
+
+label.check input {
+    width: auto;
+    margin-right: .5rem
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .55rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font: inherit;
+    background: var(--surface);
+    color: var(--text)
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px
+}
+
+.error-msg {
+    display: block;
+    color: var(--error);
+    font-size: .9rem;
+    min-height: 1.2em
+}
+
+button {
+    margin-top: 1rem;
+    padding: .6rem 1.3rem;
+    background: var(--primary);
+    color: var(--bg);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600
+}
+
+button:hover {
+    opacity: .9
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1rem
+}
+
+.filters button {
+    margin: 0
+}
+
+.filters button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #000
+}
+
+[hidden] {
+    display: none !important
+}
+
+#topBtn {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    margin: 0
+}
+
+#formOk {
+    font-weight: 600
+}
+
+@media (min-width:768px) {
+    .menu-btn {
+        display: none
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .hero {
+        grid-template-columns: 1.2fr 1fr
+    }
+}
+
+@media print {
+
+    nav,
+    .tools,
+    #topBtn,
+    .skip-link,
+    .filters,
+    #search,
+    label[for=search] {
+        display: none
+    }
+
+    body {
+        background: #fff;
+        color: #000
+    }
+
+    header,
+    footer,
+    thead {
+        background: #fff;
+        color: #000
+    }
+
+    th,
+    td {
+        border: 1px solid #000
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+}
