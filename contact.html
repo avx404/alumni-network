@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student Alumni Network: connecting students, alumni and faculty.">
+<title>Student Alumni Network | Contact &amp; Register</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<h1>Student Alumni Network</h1>
+<div class="tools">
+<button id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</div>
+</header>
+<nav aria-label="Main"><ul id="menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="directory.html">Alumni Directory</a></li><li><a href="stories.html">Success Stories</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html" class="current" aria-current="page">Contact &amp; Register</a></li></ul></nav>
+<main id="main">
+<section><h2>Register as alumnus or contact us</h2>
+<form id="regForm" action="#" method="post" novalidate>
+<label for="name">Full name</label>
+<input type="text" id="name" name="name" autocomplete="name" required>
+<span class="error-msg" id="name-error"></span>
+<label for="email">Email</label>
+<input type="email" id="email" name="email" autocomplete="email" required>
+<span class="error-msg" id="email-error"></span>
+<label for="phone">Phone (10 digits)</label>
+<input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel" required>
+<span class="error-msg" id="phone-error"></span>
+<label for="batch">Batch</label>
+<select id="batch" name="batch" required><option value="">Select batch</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option></select>
+<span class="error-msg" id="batch-error"></span>
+<label class="check"><input type="checkbox" id="mentor" name="mentor"> I am willing to mentor students</label>
+<label for="msg">Message</label>
+<textarea id="msg" name="msg" rows="4"></textarea>
+<button type="submit">Register</button>
+<p id="formOk" role="status"></p>
+</form>
+<p>Prefer email? <a href="mailto:alumni@example.com">alumni@example.com</a> (sample address)</p></section>
+</main>
+<footer><p>&copy; 2026 Student Alumni Network | Group A6</p></footer>
+<button id="topBtn" type="button" aria-label="Back to top" hidden>&uarr;</button>
+</body>
+</html>

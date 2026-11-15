@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student Alumni Network: connecting students, alumni and faculty.">
+<title>Student Alumni Network | Alumni Directory</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<h1>Student Alumni Network</h1>
+<div class="tools">
+<button id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</div>
+</header>
+<nav aria-label="Main"><ul id="menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="directory.html" class="current" aria-current="page">Alumni Directory</a></li><li><a href="stories.html">Success Stories</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact &amp; Register</a></li></ul></nav>
+<main id="main">
+<section><h2>Alumni directory</h2>
+<p class="note">All records below are fictional samples.</p>
+<label for="search">Search by name, batch, branch or organisation</label>
+<input type="search" id="search" placeholder="Type to filter the table">
+<p id="count" aria-live="polite"></p>
+<div class="table-wrap"><table id="dirTable">
+<caption>Alumni Directory</caption>
+<thead><tr><th scope="col">Name</th><th scope="col">Batch</th><th scope="col">Branch</th><th scope="col">Organisation</th><th scope="col">Mentoring</th></tr></thead>
+<tbody>
+<tr><td>Riya Sharma</td><td>2019</td><td>CSE</td><td>Sample Tech Ltd</td><td>Mentor</td></tr>
+<tr><td>Arjun Mehta</td><td>2018</td><td>ECE</td><td>Sample Systems</td><td>Mentor</td></tr>
+<tr><td>Neha Gupta</td><td>2020</td><td>CSE</td><td>Sample Analytics</td><td>Open to mentor</td></tr>
+<tr><td>Karan Singh</td><td>2017</td><td>ME</td><td>Sample Motors</td><td>Mentor</td></tr>
+<tr><td>Pooja Verma</td><td>2021</td><td>IT</td><td>Sample Cloud</td><td>Open to mentor</td></tr>
+<tr><td>Rahul Yadav</td><td>2016</td><td>CSE</td><td>Sample Bank</td><td>Mentor</td></tr>
+<tr><td>Sneha Das</td><td>2022</td><td>ECE</td><td>Sample Labs</td><td>Open to mentor</td></tr>
+<tr><td>Amit Tiwari</td><td>2015</td><td>EE</td><td>Sample Power</td><td>Mentor</td></tr>
+</tbody></table></div></section>
+</main>
+<footer><p>&copy; 2026 Student Alumni Network | Group A6</p></footer>
+<button id="topBtn" type="button" aria-label="Back to top" hidden>&uarr;</button>
+</body>
+</html>

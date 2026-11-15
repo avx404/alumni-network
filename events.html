@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student Alumni Network: connecting students, alumni and faculty.">
+<title>Student Alumni Network | Events</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<h1>Student Alumni Network</h1>
+<div class="tools">
+<button id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</div>
+</header>
+<nav aria-label="Main"><ul id="menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="directory.html">Alumni Directory</a></li><li><a href="stories.html">Success Stories</a></li><li><a href="events.html" class="current" aria-current="page">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact &amp; Register</a></li></ul></nav>
+<main id="main">
+<section><h2>Events</h2>
+<div class="filters" role="group" aria-label="Filter events">
+<button type="button" data-filter="all" aria-pressed="true">All</button>
+<button type="button" data-filter="reunion" aria-pressed="false">Reunion</button>
+<button type="button" data-filter="workshop" aria-pressed="false">Workshop</button>
+<button type="button" data-filter="webinar" aria-pressed="false">Webinar</button></div>
+<div class="grid">
+<article class="card" data-category="reunion"><h3>Annual alumni meet</h3><p>Reunion on campus for all batches. Date: to be announced.</p></article>
+<article class="card" data-category="workshop"><h3>Resume and interview workshop</h3><p>Hands-on session led by alumni for final-year students.</p></article>
+<article class="card" data-category="webinar"><h3>Careers in AI</h3><p>Online talk by alumni working in data and AI roles.</p></article>
+<article class="card" data-category="workshop"><h3>Web project clinic</h3><p>Alumni review student web projects and give feedback.</p></article>
+</div></section>
+</main>
+<footer><p>&copy; 2026 Student Alumni Network | Group A6</p></footer>
+<button id="topBtn" type="button" aria-label="Back to top" hidden>&uarr;</button>
+</body>
+</html>
